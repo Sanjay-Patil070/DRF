@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "rest_framework",
     # Local apps
     "practice_api",
+    "accounts",
     "rest_framework_simplejwt",
     "rest_framework_simplejwt.token_blacklist",
 ]
@@ -74,7 +75,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "practice_drf.wsgi.application"
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
 
+CORS_ALLOW_CREDENTIALS = True
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
